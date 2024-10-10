@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>EuclideanAlgorithm: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/EuclideanAlgorithm/gcd.go (100.0%)</option>
+				
+				<option value="file1">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/Factorial/Factorial.go (100.0%)</option>
+				
+				<option value="file2">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/Factorial/Factorial_Recursive.go (100.0%)</option>
+				
+				<option value="file3">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/FastPowering/fastpowering.go (100.0%)</option>
+				
+				<option value="file4">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/IsPowerOfTwo/isPowerOfTwo.go (76.9%)</option>
+				
+				<option value="file5">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/IsPowerOfTwo/isPowerOfTwoBitwise.go (66.7%)</option>
+				
+				<option value="file6">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/PascalTriangle/pascal.go (100.0%)</option>
+				
+				<option value="file7">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/PrimalityTest/prime.go (86.7%)</option>
+				
+				<option value="file8">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/Radian/radian.go (100.0%)</option>
+				
+				<option value="file9">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/SieveOfEratosthenes/sieveOfEratosthenes.go (100.0%)</option>
+				
+				<option value="file10">/var/tmp/Roost/RoostGPT/go-unit-testing1/c4ea771a-b1e2-4e71-96f6-5756d2bd9935/source/learning-go/algorithms/math/SquareRoot/sqrt.go (81.8%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package EuclideanAlgorithm
+
+func GCD(a, b int) int <span class="cov8" title="1">{
+        for b != 0 </span><span class="cov8" title="1">{
+                t := b
+                b = a % b
+                a = t
+        }</span>
+        <span class="cov8" title="1">return a</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package Factorial
+
+func Factorial(num int) int <span class="cov8" title="1">{
+        result := 1
+
+        for i := 1; i &lt;= num; i++ </span><span class="cov8" title="1">{
+                result *= i
+        }</span>
+
+        <span class="cov8" title="1">return result</span>
+}
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package Factorial
+
+func FactorialRecursive(num int) int <span class="cov8" title="1">{
+        if num == 0 </span><span class="cov8" title="1">{
+                return 1
+        }</span>
+
+        <span class="cov8" title="1">return num * FactorialRecursive(num-1)</span>
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package FastPowering
+
+import (
+        "math"
+)
+
+func fastPowering(base float64, power int) float64 <span class="cov8" title="1">{
+        // Anything raised to the power of zero is 1
+        if power == 0 </span><span class="cov8" title="1">{
+                return 1
+        }</span>
+
+        // Even powers are redefined via two smaller powers
+        <span class="cov8" title="1">if power%2 == 0 </span><span class="cov8" title="1">{
+                multiplier := fastPowering(base, power/2)
+                return multiplier * multiplier
+        }</span>
+
+        // Odd powers
+        <span class="cov8" title="1">multiplier := fastPowering(base, int(math.Floor(float64(power/2))))
+        return multiplier * multiplier * base</span>
+}
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package IsPowerOfTwo
+
+/*
+        Find if the number is a power of two or not by dividing it without remainder (primitive)
+*/
+func isPowerOfTwo(num int) bool <span class="cov8" title="1">{
+        if num &lt; 2 </span><span class="cov0" title="0">{
+                return false
+        }</span>
+
+        <span class="cov8" title="1">for num != 1 </span><span class="cov8" title="1">{
+                if mod(num, 2) != 0 </span><span class="cov8" title="1">{
+                        return false
+                }</span>
+                <span class="cov8" title="1">num = num / 2</span>
+        }
+
+        <span class="cov8" title="1">return true</span>
+}
+
+func mod(a, b int) int <span class="cov8" title="1">{
+        m := a % b
+        if a &lt; 0 &amp;&amp; b &lt; 0 </span><span class="cov0" title="0">{
+                m -= b
+        }</span>
+        <span class="cov8" title="1">if a &lt; 0 &amp;&amp; b &gt; 0 </span><span class="cov0" title="0">{
+                m += b
+        }</span>
+        <span class="cov8" title="1">return m</span>
+}
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package IsPowerOfTwo
+
+/**
+Bitwise represenations of PowerOfTwo numbers always have exactly 1 bit set. The only exception is with a signed integer.
+e.g. An 8-bit signed integer with a value of -128 looks like: 10000000
+
+If the number is greater 0 we can check the PowerOfTwo using the bitwise AND operator
+*/
+func isPowerOfTwoBitwise(num int) bool <span class="cov8" title="1">{
+        // Check if num is greater 0
+        if num &lt; 0 </span><span class="cov0" title="0">{
+                return false
+        }</span>
+
+        <span class="cov8" title="1">return (num &amp; (num - 1)) == 0</span>
+}
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package PascalTriangle
+
+func pascalTriangle(height int) [][]int <span class="cov8" title="1">{
+        pascalTriangle := make([][]int, height)
+
+        // Make pacal triangle row
+        for i := 0; i &lt; height; i++ </span><span class="cov8" title="1">{
+                pascalTriangle[i] = make([]int, i+1)
+
+                pascalTriangle[i][0] = 1
+
+                // Fill row with values
+                for j := 1; j &lt; i; j++ </span><span class="cov8" title="1">{
+                        pascalTriangle[i][j] = pascalTriangle[i-1][j] + pascalTriangle[i-1][j-1]
+                }</span>
+
+                <span class="cov8" title="1">pascalTriangle[i][i] = 1</span>
+        }
+
+        <span class="cov8" title="1">return pascalTriangle</span>
+}
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package PrimalityTest
+
+import (
+        "math"
+)
+
+// O(n)
+func isPrimeNumber(num int) bool <span class="cov8" title="1">{
+        for i := 2; i &lt; num; i++ </span><span class="cov8" title="1">{
+                if mod(num, i) == 0 </span><span class="cov8" title="1">{
+                        return false
+                }</span>
+        }
+
+        <span class="cov8" title="1">return true</span>
+}
+
+// O(sqrt(n))
+func isPrime(num int) bool <span class="cov8" title="1">{
+        s := math.Sqrt(float64(num))
+        for i := 2; i &lt; int(s); i++ </span><span class="cov8" title="1">{
+                if mod(num, i) == 0 </span><span class="cov8" title="1">{
+                        return false
+                }</span>
+        }
+        <span class="cov8" title="1">return num &gt; 1</span>
+}
+
+func mod(a, b int) int <span class="cov8" title="1">{
+        m := a % b
+        if a &lt; 0 &amp;&amp; b &lt; 0 </span><span class="cov0" title="0">{
+                m -= b
+        }</span>
+        <span class="cov8" title="1">if a &lt; 0 &amp;&amp; b &gt; 0 </span><span class="cov0" title="0">{
+                m += b
+        }</span>
+        <span class="cov8" title="1">return m</span>
+}
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package Radian
+
+import (
+        "math"
+)
+
+func degreeToRadian(degree float64) float64 <span class="cov8" title="1">{
+        return degree * (math.Pi / 180)
+}</span>
+
+func radianToDegree(radian float64) float64 <span class="cov8" title="1">{
+        return radian * (180 / math.Pi)
+}</span>
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package SieveOfEratosthenes
+
+func sieveOfEratosthenes(maxNumber int) []int <span class="cov8" title="1">{
+        isPrime := make([]bool, maxNumber+1)
+
+        // Initialize array with true values
+        for i := 0; i &lt; maxNumber+1; i++ </span><span class="cov8" title="1">{
+                isPrime[i] = true
+        }</span>
+
+        <span class="cov8" title="1">isPrime[0] = false
+        isPrime[1] = false
+
+        var primes []int
+
+        // Loop until max number
+        for num := 2; num &lt;= maxNumber; num++ </span><span class="cov8" title="1">{
+                if isPrime[num] == true </span><span class="cov8" title="1">{
+                        // Save prime number in array
+                        primes = append(primes, num)
+
+                        // Start marking multiples of p from p * p, and not from 2 * p because, smaller multiples of p will have already been marked false.
+                        nextNum := num * num
+
+                        // Mark all multiples of a prime number as false
+                        for nextNum &lt;= maxNumber </span><span class="cov8" title="1">{
+                                isPrime[nextNum] = false
+                                nextNum += num
+                        }</span>
+                }
+        }
+
+        <span class="cov8" title="1">return primes</span>
+}
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package SquareRoot
+
+func squareRoot(num float64) float64 <span class="cov8" title="1">{
+        // Method only supports positiv integers
+        if num &lt; 0 </span><span class="cov0" title="0">{
+                return -1
+        }</span>
+
+        // Handle edge case square root of zero
+        <span class="cov8" title="1">if num == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+
+        // Set start values
+        <span class="cov8" title="1">root := 1.0
+        cur := 0.0
+
+        // Find root
+        for cur-root != 0 </span><span class="cov8" title="1">{
+                root = newton(root, num)
+                cur = newton(root, num)
+        }</span>
+
+        <span class="cov8" title="1">return root</span>
+}
+
+func newton(z, x float64) float64 <span class="cov8" title="1">{
+        return z - (((z * z) - x) / (2 * z))
+}</span>
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
