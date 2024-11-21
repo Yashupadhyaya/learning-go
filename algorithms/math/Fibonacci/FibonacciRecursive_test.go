@@ -47,6 +47,8 @@ Validation:
   The assertion is based on the function's implementation. This test is important to ensure that the function handles invalid inputs correctly.
 
 roost_feedback [11/21/2024, 9:29:23 AM]:- Add more comments to the test
+
+roost_feedback [11/21/2024, 9:33:25 AM]:- Add more comments to the test\n- Improve assertions\n- Format the test
 */
 
 // ********RoostGPT********
@@ -64,6 +66,7 @@ func TestFibonacciRecursive(t *testing.T) {
 		input    int  // input represents the nth number in fibonacci sequence
 		expected int  // expected represents the expected output
 	}
+
 	// Test cases
 	tests := []test{
 		{0, 0},  // testing for base case 0
