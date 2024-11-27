@@ -1,6 +1,6 @@
 package InterpolationSearch
 
-func interpolationSearch(arr []int, query int) int {
+func interpolationSearchFunc(arr []int, query int) int {
 	// Find indexes of two corners
 	lo := 0
 	hi := len(arr) - 1

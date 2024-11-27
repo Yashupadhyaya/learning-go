@@ -1,6 +1,6 @@
 package BinarySearch
 
-func binarySearch(arr []int, query int) int {
+func binarySearchFunc(arr []int, query int) int {
 	// Set min and max index
 	minIndex := 0
 	maxIndex := len(arr) - 1
@@ -25,3 +25,13 @@ func binarySearch(arr []int, query int) int {
 
 	return -1
 }
+
+func SearchLinear(arr []int, query int) int {
+	for i, val := range arr {
+		if val == query {
+			return i
+		}
+	}
+	return -1
+}
+

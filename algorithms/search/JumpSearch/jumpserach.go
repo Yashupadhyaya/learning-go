@@ -38,3 +38,12 @@ func jumpSearch(arr []int, query int) int {
 
 	return -1
 }
+func SearchLinerFunc(arr []int, query int) int {
+	for i, val := range arr {
+		if val == query {
+			return i
+		}
+	}
+	return -1
+}
+
